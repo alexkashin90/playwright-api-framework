@@ -17,8 +17,8 @@ jobs:
 
     - name: Install dependencies
       run: npm install
-      working-directory: /home/runner/work/playwright-api-framework
+      working-directory: /home/runner/work
 
     - name: Run tests
       run: npm run tests
-      working-directory: /home/runner/work/playwright-api-framework
+      working-directory: /home/runner/work
