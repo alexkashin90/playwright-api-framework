@@ -17,7 +17,7 @@ jobs:
 
     - name: Install dependencies
       run: npm install
-      working-directory: /home/runner/work
+      working-directory: /home/runner/work/palywright-api-framework
 
     - name: Run tests
       run: npm run tests
