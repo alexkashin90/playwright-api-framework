@@ -55,3 +55,12 @@ jobs:
        github_token: ${{ secrets.GITHUB_TOKEN }}
        publish_dir: ./playwright-report 
        publish_branch: gh-pages
+
+      run-secondary-workflow:
+          runs-on: ubuntu-latest
+            steps:
+              - name: Checkout code
+                uses: actions/checkout@v3
+
+                - name: Publish report
+                  uses: ./.github/workflows/static.yml
