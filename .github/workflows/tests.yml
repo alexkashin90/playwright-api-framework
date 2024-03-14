@@ -26,7 +26,7 @@ jobs:
     
 
     - name: Run tests
-      run: npm run tests-and-allure-report
+      run: npm run tests-and-allure-ci
     
     - name: Upload Playwright report
       uses: actions/upload-artifact@v2
