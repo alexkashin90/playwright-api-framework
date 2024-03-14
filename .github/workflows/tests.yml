@@ -15,10 +15,10 @@ jobs:
     steps:
 
     - name: Checkout framework
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Set up Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3
       with:
         node-version: '20.11.1'
 
@@ -29,7 +29,7 @@ jobs:
       run: npm run tests-and-allure-ci
     
     - name: Upload Playwright report
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       if: always()
       with:
         name: playwright-report
@@ -37,7 +37,7 @@ jobs:
         retention-days: 2
 
     - name: Upload Allure report
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       if: always()
       with:
         name: allure-report
@@ -55,5 +55,5 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
        github_token: ${{ secrets.GITHUB_TOKEN }}
-       publish_dir: ./playwright-report  # Adjust the directory path where your Playwright report is located
+       publish_dir: ./playwright-report 
        publish_branch: gh-pages
