@@ -3,6 +3,10 @@ name: Playwright API Tests
 on:
   workflow_dispatch:  # Manually trigger workflow
 
+permissions:
+  contents: read
+  pages: write
+
 jobs:
   test:
     timeout-minutes: 60
