@@ -56,11 +56,12 @@ jobs:
        publish_dir: ./playwright-report 
        publish_branch: gh-pages
 
-      run-secondary-workflow:
-          runs-on: ubuntu-latest
-            steps:
-              - name: Checkout code
-                uses: actions/checkout@v3
+  run-secondary-workflow:
+    runs-on: ubuntu-latest
+            
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-                - name: Publish report
-                  uses: ./.github/workflows/static.yml
+    - name: Publish report
+      uses: ./.github/workflows/static.yml
