@@ -40,9 +40,16 @@ jobs:
         path: allure-report/
         retention-days: 2
 
-    - name: Deploy Allure report to GitHub Pages
+    # - name: Deploy Allure report to GitHub Pages
+    #   uses: peaceiris/actions-gh-pages@v3
+    #   with:
+    #     github_token: ${{ secrets.GITHUB_TOKEN }}
+    #     publish_dir: allure-report
+    #     publish_branch: gh-pages
+
+    - name: Deploy Playwright report to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: allure-report
-        publish_branch: gh-pages
+       github_token: ${{ secrets.GITHUB_TOKEN }}
+       publish_dir: ./playwright-report  # Adjust the directory path where your Playwright report is located
+       publish_branch: gh-pages
