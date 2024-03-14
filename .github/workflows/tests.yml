@@ -1,6 +1,8 @@
 name: Playwright API Tests
 
 on:
+  push:
+    branches: ["master"]
   workflow_dispatch:  # Manually trigger workflow
 
 permissions: write-all
