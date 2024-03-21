@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "remove-reports": "node src/utilities/removeReports.js",
-    "run-tests": "npx playwright test --config=src/config/playwright.config.js",
+    "run-tests": "eslint . && npx playwright test --config=src/config/playwright.config.js",
     "tests": "npm run remove-reports && npm run run-tests",
     "playwright-report": "npx playwright show-report",
     "allure-generate": "npx allure generate allure-results --clean",
@@ -13,7 +13,12 @@
     "allure-report": "npm run allure-generate && npm run allure-open",
     "tests-and-allure-report": "npm run tests && npm run allure-report",
     "tests-and-allure-ci": "npm run tests && npm run allure-generate"
-
+  },
+  "husky": {
+    "hooks": {
+      "pretest": "eslint .",
+      "pre-commit": "npm run tests-and-allure-report"
+    }
   },
   "keywords": [
     "api",
@@ -26,6 +31,8 @@
     "@types/node": "^20.11.26",
     "allure-commandline": "^2.27.0",
     "allure-playwright": "^2.14.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-playwright": "^1.5.3",
     "husky": "^9.0.11"
   }
 }
