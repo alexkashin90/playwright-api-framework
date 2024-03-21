@@ -37,7 +37,7 @@ test.describe("JsonPlaceholder Negative API Tests", () => {
     expect(comments).toEqual([]);
   });
 
-  test('Negative (error in ID) PUT /posts/{id}', async () => {
+  test("Negative (error in ID) PUT /posts/{id}", async () => {
     const postByIdUrl = urlsConfig(999).postById;
     const response = await putRequest(postByIdUrl, putRequestData);
     expect(response.status()).toBe(responseStatus.putNegative);
