@@ -3,15 +3,18 @@
   "type": "array",
   "items": {
     "type": "object",
-    "required": ["userId", "id", "title", "body"],
+    "required": ["postId", "id", "name", "email", "body"],
     "properties": {
-      "userId": {
+      "postId": {
         "type": "integer"
       },
       "id": {
         "type": "integer"
       },
-      "title": {
+      "name": {
+        "type": "string"
+      },
+      "email": {
         "type": "string"
       },
       "body": {
