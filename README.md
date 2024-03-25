@@ -35,6 +35,7 @@ To run specifically annotated tests, execute the following command:
 npx playwright test --config=src/config/playwright.config.js --grep @SMOKE
 ```
 This is example of how to run tests annotated with '@SMOKE' tag. Replace '@SMOKE' with a desired annotation.
+
 List of available annotations: 
 
 1. @SMOKE
