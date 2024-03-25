@@ -36,14 +36,15 @@ npx playwright test --config=src/config/playwright.config.js --grep @SMOKE
 ```
 This is example of how to run tests annotated with '@SMOKE' tag. Replace '@SMOKE' with a desired annotation.
 List of available annotations: 
-    @SMOKE; 
-    @REGRESSION; 
-    @NEGATIVE; 
-    @GET; 
-    @POST; 
-    @PUT; 
-    @PATCH;
-    @DELETE.
+
+1. @SMOKE
+2. @REGRESSION
+3. NEGATIVE
+4. @GET 
+5. @POST
+6. @PUT 
+7. @PATCH
+8. @DELETE
 
 ### Viewing Reports
 
