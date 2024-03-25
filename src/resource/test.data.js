@@ -7,4 +7,24 @@ const numberOfElements = {
     users: 10
 };
 
-module.exports = { numberOfElements };
+const emptyObject = {};
+
+const emptyArray = [];
+
+const correctPostId = 1;
+
+const correctCommentId = 1;
+
+const incorrectPostId = 101;
+
+const incorrectCommentId = 999;
+
+module.exports = { 
+    numberOfElements, 
+    emptyObject, 
+    emptyArray, 
+    correctPostId, 
+    correctCommentId,
+    incorrectPostId, 
+    incorrectCommentId,
+};

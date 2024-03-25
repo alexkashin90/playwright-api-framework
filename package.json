@@ -12,7 +12,8 @@
     "allure-open": "npx allure open",
     "allure-report": "npm run allure-generate && npm run allure-open",
     "tests-and-allure-report": "npm run tests && npm run allure-report",
-    "tests-and-allure-ci": "npm run tests && npm run allure-generate"
+    "tests-and-allure-ci": "npm run tests && npm run allure-generate",
+    "smoke-tests": "npx playwright test --config=src/config/playwright.config.js --grep @SMOKE"
   },
   "husky": {
     "hooks": {

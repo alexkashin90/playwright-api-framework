@@ -29,6 +29,22 @@ npm run tests-and-allure-report
 
 This command will remove any previous reports, run ESLint to ensure code quality, execute the API tests using Playwright, and then form and open Allure report automatically.
 
+To run specifically annotated tests, execute the following command:
+
+```bash
+npx playwright test --config=src/config/playwright.config.js --grep @SMOKE
+```
+This is example of how to run tests annotated with '@SMOKE' tag. Replace '@SMOKE' with a desired annotation.
+List of available annotations: 
+    @SMOKE; 
+    @REGRESSION; 
+    @NEGATIVE; 
+    @GET; 
+    @POST; 
+    @PUT; 
+    @PATCH;
+    @DELETE.
+
 ### Viewing Reports
 
 #### Playwright Report
