@@ -21,7 +21,7 @@ npm run tests
 ```
 This command will remove any previous reports, run ESLint to ensure code quality, and then execute the API tests using Playwright.
 
-To run the tests, and see the Allure report right after the execution, run the following command:
+To run the tests, and view the Allure report right after the execution, run the following command:
 
 ```bash
 npm run tests-and-allure-report
